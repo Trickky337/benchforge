@@ -1,0 +1,41 @@
+{
+  "tool": "benchforge",
+  "timestamp": "2026-01-19T16:59:35.774712Z",
+  "profile": "light",
+  "system": {
+    "os": "Darwin",
+    "os_version": "Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:51 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T8112",
+    "machine": "arm64",
+    "processor": "arm",
+    "cpu": {
+      "physical_cores": 8,
+      "logical_cores": 8,
+      "max_freq_mhz": 3504
+    },
+    "memory": {
+      "total_gb": 8.0
+    },
+    "storage": {
+      "total_gb": 228.27
+    }
+  },
+  "benchmarks": {
+    "cpu": {
+      "loops": 10000000,
+      "elapsed_sec": 0.693,
+      "approx_ops_per_sec": 14436947.33
+    },
+    "disk": {
+      "size_mb": 128,
+      "write_sec": 0.033,
+      "read_sec": 0.009,
+      "write_mbps": 3933.37,
+      "read_mbps": 14200.66
+    }
+  },
+  "analysis": {
+    "notes": [
+      "No obvious bottleneck detected from basic CPU/Disk checks (expand tests for GPU/thermals)."
+    ]
+  }
+}
