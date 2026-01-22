@@ -1,6 +1,6 @@
 import argparse
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 
 from benchforge.collectors.system_info import collect_system_info
 from benchforge.workloads.cpu_bench import run_cpu_bench
@@ -21,7 +21,7 @@ def main():
     if args.cmd == "run":
         report = {
             "tool": "benchforge",
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             "profile": args.profile,
             "system": collect_system_info(),
             "benchmarks": {},
